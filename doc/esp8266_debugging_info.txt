@@ -1,0 +1,7 @@
+If the device keep resetting, check out the cause in therminal after reboot.
+
+1: normal boot
+2: reset pin
+3: software reset
+4: watchdog reset
+
