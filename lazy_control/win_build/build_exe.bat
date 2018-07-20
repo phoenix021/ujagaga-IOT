@@ -3,8 +3,9 @@ copy ..\icon_data.py icon_data.py
 copy ..\icon.ico icon.ico
 copy ..\startup.wav startup.wav
 copy ..\theend.wav theend.wav
-mkdir web
-copy ..\web web
+rmdir /s /q skins
+mkdir skins
+xcopy /s ..\skins skins
 
 del *.exe
 
