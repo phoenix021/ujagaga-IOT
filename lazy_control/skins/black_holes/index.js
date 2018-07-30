@@ -93,7 +93,13 @@ setInterval(function(){
         wt.open('GET',url, true);
         wt.send(null);
         wt.onreadystatechange=function(){
-            if(wt.readyState==4 && wt.status==200){
-                var curTitle=JSON.parse(this.responseText);
-                document.getElementById('cur_title').textContent=curTitle.CURRENT;
-        }}}}, 1000);
+            if(wt.readyState==4){
+                if(wt.status==200){
+                    var curTitle=JSON.parse(this.responseText);
+                    document.getElementById('cur_title').textContent=curTitle.CURRENT;
+                }else{
+                    document.getElementById('cur_title').textContent="ERROR: no connection...";
+                }
+            }
+
+        }}}, 1000);
